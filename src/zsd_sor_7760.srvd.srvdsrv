@@ -1,0 +1,6 @@
+@EndUserText.label: 'Service defintion (Sales Order 7760)'
+define service ZSD_SOR_7760 {
+  expose Z_C_SOR_HEADER_7760;
+  expose Z_I_SOR_HEADER_7760;
+  expose Z_C_SOR_ITEMS_7760;
+}

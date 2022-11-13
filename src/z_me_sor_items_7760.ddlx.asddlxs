@@ -1,0 +1,82 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+
+@UI: {
+  headerInfo: {
+    imageUrl: 'imageurl',
+    typeName: 'Item',
+    typeNamePlural: 'Items',
+    title: {
+      type: #STANDARD,
+      value: 'Name'
+    },
+    description:{ value: 'Description' }
+  }
+}
+annotate view Z_C_SOR_ITEMS_7760 with
+{
+  @UI.facet: [ {
+                id: 'Items',
+                purpose: #STANDARD,
+                type: #IDENTIFICATION_REFERENCE,
+                label: 'Items',
+                position: 10
+              } ]
+  @UI: {
+  lineItem: [ { position: 10, importance: #HIGH } ],
+  identification: [ { position: 10, label: 'Id' } ] }
+  @Search.defaultSearchElement: true
+  Id;
+  @UI: {
+  lineItem: [ { position: 20, importance: #HIGH } ],
+  identification: [ { position: 20, label: 'Ebelp' } ] }
+  @Search.defaultSearchElement: true
+  Ebelp;
+  @UI: {
+  lineItem: [ { position: 30, importance: #HIGH } ],
+  identification: [ { position: 30, label: 'Name' } ] }
+  @Search.defaultSearchElement: true
+  Name;
+  @UI.hidden: true
+  Description;
+  @UI: {
+  lineItem: [ { position: 40, importance: #MEDIUM } ],
+  identification: [ { position: 50, label: 'Release date' } ] }
+  @EndUserText.label: 'Release date'
+  Releasedate;
+  @UI: {
+  lineItem: [ { position: 50, importance: #MEDIUM } ],
+  identification: [ { position: 60, label: 'Discontinued date' } ] }
+  @EndUserText.label: 'Discontinued date'
+  Discontinueddate;
+  @UI: {
+  lineItem: [ { position: 60, importance: #HIGH } ],
+  identification: [ { position: 70, label: 'Price' } ] }
+  Price;
+  @UI: {
+  lineItem: [ { position: 70, importance: #HIGH } ],
+  identification: [ { position: 80, label: 'Height' } ] }
+  Height;
+  @UI: {
+  lineItem: [ { position: 80, importance: #HIGH } ],
+  identification: [ { position: 90, label: 'Width' } ] }
+  Width;
+  @UI: {
+  lineItem: [ { position: 90, importance: #HIGH } ],
+  identification: [ { position: 100, label: 'Depth' } ] }
+  Depth;
+  @UI: {
+  lineItem: [ { position: 100, importance: #HIGH } ],
+  identification: [ { position: 110, label: 'Quantity' } ] }
+  Quantity;
+  @UI: {
+  lineItem: [ { position: 110, importance: #MEDIUM } ],
+  identification: [ { position: 120, label: 'Unit of Measure' } ] }
+  @EndUserText.label: 'Unit of Measure'
+  Unitofmeasure;
+  @UI: {
+    lineItem: [ { position: 120, importance: #MEDIUM } ],
+    identification: [ { position: 120, label: 'Imageurl' } ] }
+  @EndUserText.label: 'Imageurl'
+  Imageurl;
+}

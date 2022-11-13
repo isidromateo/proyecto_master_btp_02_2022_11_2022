@@ -1,0 +1,5 @@
+@EndUserText.label: 'Image Service definition (7760)'
+define service Zsd_image_7760 {
+  expose ZC_CUSTOM_IMAGE_7760;
+  expose Z_I_CUSTOM_IMAGE_7760;
+}

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZMC_BTP_7760</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Message Class for Sales Orders (7760)</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMC_BTP_7760</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>The &apos;Email&apos; field is required</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZMC_BTP_7760</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Correctly report the &apos;Email&apos; field</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

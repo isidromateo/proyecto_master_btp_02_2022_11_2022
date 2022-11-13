@@ -1,0 +1,82 @@
+@Metadata.layer: #CORE
+@Search.searchable: true
+@UI: {
+  headerInfo: {
+    imageUrl : 'CustImageUrl',
+    typeName: 'Sales Order Metada',
+    typeNamePlural: 'Sales Orders'
+ //   title: {
+ //     type: #STANDARD,
+ //     value: 'CustImageUrl'
+ //   }
+} }
+
+annotate view Z_C_SOR_HEADER_7760 with
+{
+  @UI.facet: [ {
+                 id: 'Order',
+                 purpose: #STANDARD,
+                 type: #IDENTIFICATION_REFERENCE,
+                 label: 'Sales Order',
+                 position: 10
+               },
+               { id: 'Items',
+                 purpose: #STANDARD,
+                 type: #LINEITEM_REFERENCE,
+                 label: 'Items',
+                 position: 20,
+                 targetElement: '_items_7760'
+               }
+              ]
+  @UI: {
+    lineItem: [ { position: 10, importance: #HIGH } ],
+    identification: [ { position: 10, label: 'Sales Order ID' } ] }
+  @Search.defaultSearchElement: true
+  Id;
+  @UI: {
+    lineItem: [ { position: 20, importance: #HIGH } ],
+    identification: [ { position: 20, label: 'Email' } ],
+    selectionField: [ { position: 20 } ] }
+  @Search.defaultSearchElement: true
+  Email;
+  @UI: {
+    lineItem: [ { position: 30, importance: #HIGH } ],
+    identification: [ { position: 30, label: 'First name' } ] }
+  @EndUserText.label: 'First name'
+  Firstname;
+  @UI: {
+    lineItem: [ { position: 40, importance: #HIGH } ],
+    identification: [ { position: 40, label: 'Last name' } ] }
+  @EndUserText.label: 'Last name'
+  Lastname;
+  @UI: {
+    lineItem: [ { position: 50, importance: #HIGH } ],
+    identification: [ { position: 50, label: 'Country' } ],
+    selectionField: [ { position: 30 } ] }
+  @Search.defaultSearchElement: true
+  Country;
+  @UI: {
+    lineItem: [ { position: 60, importance: #HIGH } ],
+    identification: [ { position: 60, label: 'Created on' } ] }
+  @EndUserText.label: 'Created on'
+  createon;
+  @UI: {
+  lineItem: [ { position: 70, importance: #HIGH } ],
+  identification: [ { position: 70, label: 'Delivery date' } ] }
+  @EndUserText.label: 'Delivery date'
+  deliverydate;
+  @UI: {
+    lineItem: [ { position: 80, importance: #HIGH } ],
+    identification: [ { position: 80, label: 'Status' } ],
+    selectionField: [ { position: 40 } ] }
+  @Search.defaultSearchElement: true
+  @EndUserText.label: 'Status'
+  Orderstatus;
+ // @UI: {
+ //    lineItem: [ { position: 90, importance: #HIGH } ],
+ //    identification: [ { position: 80, label: 'Status' } ],
+ //    selectionField: [ { position: 90 } ] }
+ // @Search.defaultSearchElement: true
+ // @EndUserText.label: 'CustImageUrl'
+ // CustImageUrl;
+}

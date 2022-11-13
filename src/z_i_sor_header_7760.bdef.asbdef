@@ -1,0 +1,53 @@
+managed;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for Z_I_SOR_HEADER_7760 alias so_header
+implementation in class zbp_i_sor_header_7760 unique
+persistent table zsor_header_7760
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  // Static Field Control
+  field ( readonly, numbering : managed ) Id;
+  field ( mandatory ) Email;
+
+  // CRUD
+  create;
+  update;
+  delete;
+
+  // Validations
+  validation validateEmail on save { create; field Email; }
+
+  // Associations
+  association _items_7760 { create; }
+
+  //Mappings
+  mapping for zsor_header_7760 corresponding;
+
+}
+
+define behavior for Z_I_SOR_ITEMS_7760 alias so_items
+persistent table zsor_items_7760
+lock dependent by _header_7760
+authorization dependent by _header_7760
+//etag master <field_name>
+
+{
+  // Static Field Control
+  field ( readonly, numbering : managed ) Ebelp;
+  field ( readonly ) id;
+  field ( mandatory ) Name, Description, Price, Quantity;
+
+  // CRUD
+  update;
+  delete;
+
+  // Associations
+  association _header_7760;
+
+  //Mappings
+  mapping for zsor_items_7760 corresponding;
+
+}
